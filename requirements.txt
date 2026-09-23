@@ -9,3 +9,9 @@ geopy
 shap
 streamlit
 joblib
+fastapi
+uvicorn
+pydantic
+httpx
+plotly
+pytest
