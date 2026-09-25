@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KrishiDrishti — AI Agricultural Intelligence Platform</title>
+  <meta name="description"
+    content="KrishiDrishti empowers Indian farmers with AI-driven crop yield predictions, agro-climatic insights, and data-driven agricultural decisions across 30+ states." />
+  <meta name="keywords"
+    content="AI crop yield prediction, agricultural intelligence, India farming, KrishiDrishti, precision agriculture" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo"><span class="logo-icon">🌾</span><span class="logo-text">KrishiDrishti</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#stats" class="nav-link">About</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="http://localhost:8501" class="btn-ghost">Sign In</a>
+        <a href="http://localhost:8501" class="btn-primary">Get Started</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="home">
+    <div class="hero-bg-image" id="hero-parallax"></div>
+    <div class="hero-overlay"></div>
+    <div class="grain-particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge"><span class="badge-dot"></span>AI-Powered Agricultural Intelligence</div>
+      <h1 class="hero-title">Smarter Insights.<br /><span class="hero-title-accent">Better Harvests.</span></h1>
+      <p class="hero-description">Empowering farmers with AI-driven crop yield predictions, agro-climatic insights, and
+        data-driven agricultural decisions across India's diverse farming landscape.</p>
+      <div class="hero-actions">
+        <a href="http://localhost:8501" class="btn-hero-primary"><span>Explore KrishiDrishti</span><svg class="btn-icon"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg></a>
+        <a href="http://localhost:8501" class="btn-hero-ghost"><span>Sign In</span></a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="stat-num">77K+</span><span class="stat-label">Historical Records</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat"><span class="stat-num">30+</span><span class="stat-label">States Covered</span></div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat"><span class="stat-num">86.5%</span><span class="stat-label">Model Accuracy R²</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div><span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ─── TRUST STRIP ─── -->
+  <section class="trust-strip">
+    <div class="container">
+      <p class="trust-label">Powered by</p>
+      <div class="trust-logos">
+        <div class="trust-item"><span class="trust-icon">🏛️</span><span>DES Agricultural Census</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><span class="trust-icon">🌤️</span><span>Open-Meteo Weather API</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><span class="trust-icon">🧠</span><span>XGBoost AI Engine</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><span class="trust-icon">🔍</span><span>SHAP Explainable AI</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEATURES ─── -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Core Capabilities</p>
+        <h2 class="section-title">Intelligence at Every<br /><span class="text-accent">Stage of Farming</span></h2>
+        <p class="section-desc">From seed selection to harvest forecasting — KrishiDrishti delivers actionable
+          intelligence powered by machine learning and real-time data.</p>
+      </div>
+
+      <div class="features-grid">
+
+        <!-- Card 1 — AI Yield Prediction -->
+        <div class="feature-card reveal" id="feature-card-1" data-modal="modal-yield" role="button" tabindex="0"
+          aria-label="Open AI Crop Yield Prediction">
+          <div class="feature-card-inner">
+            <div class="feature-img-wrap">
+              <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&q=80&auto=format&fit=crop"
+                alt="AI Crop Yield Prediction" class="feature-img" loading="lazy" />
+              <div class="feature-img-overlay"></div>
+              <div class="card-click-hint">Click to try →</div>
+            </div>
+            <div class="feature-card-body">
+              <div class="feature-icon-wrap"><span class="feature-icon">🤖</span></div>
+              <h3 class="feature-title">AI Crop Yield Prediction</h3>
+              <p class="feature-desc">District-level yield forecasts powered by a tuned XGBoost model trained on 77,000+
+                census records. Delivers outputs in both kg/ha and Quintals/Acre.</p>
+              <div class="feature-tag-row">
+                <span class="f-tag">XGBoost</span><span class="f-tag">R² 0.865</span><span
+                  class="f-tag">District-Level</span>
+              </div>
+              <button class="card-try-btn" id="card-btn-1">🚀 Try Yield Prediction</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 — Agro-Weather -->
+        <div class="feature-card reveal" id="feature-card-2" data-modal="modal-weather" role="button" tabindex="0"
+          aria-label="Open Agro-Weather Insights">
+          <div class="feature-card-inner">
+            <div class="feature-img-wrap">
+              <img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=600&q=80&auto=format&fit=crop"
+                alt="Agro Weather Insights" class="feature-img" loading="lazy" />
+              <div class="feature-img-overlay"></div>
+              <div class="card-click-hint">Click to try →</div>
+            </div>
+            <div class="feature-card-body">
+              <div class="feature-icon-wrap"><span class="feature-icon">🌦️</span></div>
+              <h3 class="feature-title">Agro-Weather Insights</h3>
+              <p class="feature-desc">Live temperature, rainfall, humidity and 7-day agro-climatic forecasts sourced
+                from Open-Meteo — with field-ready agricultural advisories generated automatically.</p>
+              <div class="feature-tag-row">
+                <span class="f-tag">Real-Time</span><span class="f-tag">7-Day Forecast</span><span
+                  class="f-tag">Advisories</span>
+              </div>
+              <button class="card-try-btn" id="card-btn-2">🌤️ Check Live Weather</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 — Historical Analytics -->
+        <div class="feature-card reveal" id="feature-card-3" data-modal="modal-history" role="button" tabindex="0"
+          aria-label="Open Historical Yield Analytics">
+          <div class="feature-card-inner">
+            <div class="feature-img-wrap">
+              <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80&auto=format&fit=crop"
+                alt="Historical Yield Analytics" class="feature-img" loading="lazy" />
+              <div class="feature-img-overlay"></div>
+              <div class="card-click-hint">Click to try →</div>
+            </div>
+            <div class="feature-card-body">
+              <div class="feature-icon-wrap"><span class="feature-icon">📈</span></div>
+              <h3 class="feature-title">Historical Yield Analytics</h3>
+              <p class="feature-desc">Explore interactive longitudinal yield trends from 2016–2024 for any district-crop
+                combination. Compare against regional and national benchmarks instantly.</p>
+              <div class="feature-tag-row">
+                <span class="f-tag">2016–2024</span><span class="f-tag">Interactive Charts</span><span
+                  class="f-tag">Benchmarks</span>
+              </div>
+              <button class="card-try-btn" id="card-btn-3">📊 Explore Trends</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 — SHAP Explainer -->
+        <div class="feature-card reveal" id="feature-card-4" data-modal="modal-shap" role="button" tabindex="0"
+          aria-label="Open AI Explainability">
+          <div class="feature-card-inner">
+            <div class="feature-img-wrap">
+              <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&q=80&auto=format&fit=crop"
+                alt="Data-Driven Farming Decisions" class="feature-img" loading="lazy" />
+              <div class="feature-img-overlay"></div>
+              <div class="card-click-hint">Click to try →</div>
+            </div>
+            <div class="feature-card-body">
+              <div class="feature-icon-wrap"><span class="feature-icon">🔍</span></div>
+              <h3 class="feature-title">Data-Driven Farming Decisions</h3>
+              <p class="feature-desc">SHAP explainability breaks down every prediction — showing exactly how prior
+                yields, geography, crop type, and season each influenced the forecast output.</p>
+              <div class="feature-tag-row">
+                <span class="f-tag">SHAP AI</span><span class="f-tag">Explainable</span><span
+                  class="f-tag">Transparent</span>
+              </div>
+              <button class="card-try-btn" id="card-btn-4">🔍 Explain My Prediction</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ─── -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="hiw-bg-image"></div>
+    <div class="hiw-overlay"></div>
+    <div class="container hiw-content">
+      <div class="section-header reveal">
+        <p class="section-tag light">How It Works</p>
+        <h2 class="section-title light">From Data to<br /><span class="text-gold">Crop Intelligence</span></h2>
+        <p class="section-desc light">A simple 3-step process to get district-level yield forecasts with full AI
+          transparency.</p>
+      </div>
+      <div class="steps-row">
+        <div class="step reveal" id="step-1">
+          <div class="step-num">01</div>
+          <div class="step-connector"></div>
+          <div class="step-icon">📍</div>
+          <h3 class="step-title">Select Your Region</h3>
+          <p class="step-desc">Choose your State, District, Crop variety, and Season from cascading dropdowns covering
+            every Indian agricultural zone.</p>
+        </div>
+        <div class="step-arrow reveal">
+          <svg viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 12 Q30 2 60 12" stroke="rgba(212,168,67,0.5)" stroke-width="1.5" stroke-dasharray="4 3" />
+            <path d="M52 6 L60 12 L52 18" stroke="rgba(212,168,67,0.7)" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="step reveal" id="step-2">
+          <div class="step-num">02</div>
+          <div class="step-connector"></div>
+          <div class="step-icon">🚀</div>
+          <h3 class="step-title">Run AI Forecast</h3>
+          <p class="step-desc">The XGBoost engine processes historical lag yields, district encodings, and real-time
+            weather to compute your prediction.</p>
+        </div>
+        <div class="step-arrow reveal">
+          <svg viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 12 Q30 2 60 12" stroke="rgba(212,168,67,0.5)" stroke-width="1.5" stroke-dasharray="4 3" />
+            <path d="M52 6 L60 12 L52 18" stroke="rgba(212,168,67,0.7)" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="step reveal" id="step-3">
+          <div class="step-num">03</div>
+          <div class="step-connector"></div>
+          <div class="step-icon">📊</div>
+          <h3 class="step-title">Get Full Intelligence</h3>
+          <p class="step-desc">Receive yield in kg/ha and Qtl/Acre, district benchmarks, live weather advisories, and
+            SHAP feature explanations.</p>
+        </div>
+      </div>
+      <div class="hiw-cta reveal">
+        <a href="http://localhost:8501" class="btn-gold">Try the Dashboard Now <svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" class="btn-icon">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STATS ─── -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Proven at Scale</p>
+        <h2 class="section-title">Numbers That<br /><span class="text-accent">Define Our Impact</span></h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card reveal" id="stat-card-1">
+          <div class="stat-icon">🌾</div>
+          <div class="stat-number" id="stat-0">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-name">Historical Census Records</div>
+          <div class="stat-sub">DES Government Data (2016–2024)</div>
+        </div>
+        <div class="stat-card reveal" id="stat-card-2">
+          <div class="stat-icon">🗺️</div>
+          <div class="stat-number" id="stat-1">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-name">States &amp; Union Territories</div>
+          <div class="stat-sub">Pan-India Agricultural Coverage</div>
+        </div>
+        <div class="stat-card reveal" id="stat-card-3">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-number" id="stat-2">0</div>
+          <div class="stat-plus"></div>
+          <div class="stat-name">Model R² Score (×1000)</div>
+          <div class="stat-sub">Chronological Holdout Validated</div>
+        </div>
+        <div class="stat-card reveal" id="stat-card-4">
+          <div class="stat-icon">🌱</div>
+          <div class="stat-number" id="stat-3">0</div>
+          <div class="stat-plus"></div>
+          <div class="stat-name">kg/ha RMSE Accuracy</div>
+          <div class="stat-sub">Best-in-class test error margin</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SHOWCASE ─── -->
+  <section class="showcase-strip">
+    <div class="showcase-img-wrap">
+      <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1400&q=85&auto=format&fit=crop"
+        alt="Indian farmland" class="showcase-img" loading="lazy" />
+      <div class="showcase-overlay">
+        <div class="showcase-text-block">
+          <h2 class="showcase-title">"For every farmer who plants with hope,<br />KrishiDrishti plants with data."</h2>
+          <p class="showcase-sub">Bridging India's agricultural heritage with the precision of artificial intelligence.
+          </p>
+          <a href="http://localhost:8501" class="btn-hero-primary">
+            <span>Open the Dashboard</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo footer-logo"><span class="logo-icon">🌾</span><span
+              class="logo-text">KrishiDrishti</span></a>
+          <p class="footer-tagline">AI-Powered Agricultural Intelligence<br />for India's farming future.</p>
+          <div class="footer-tech-stack">
+            <span class="tech-badge">FastAPI</span><span class="tech-badge">XGBoost</span><span
+              class="tech-badge">SHAP</span><span class="tech-badge">Streamlit</span>
+          </div>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-list">
+            <li><a href="http://localhost:8501" class="footer-link">Dashboard</a></li>
+            <li><a href="#features" class="footer-link">Features</a></li>
+            <li><a href="#how-it-works" class="footer-link">How It Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Technology</h4>
+          <ul class="footer-list">
+            <li><a href="http://localhost:8000/docs" target="_blank" class="footer-link">API Docs</a></li>
+            <li><a href="http://localhost:8000/health" target="_blank" class="footer-link">API Health</a></li>
+            <li><a href="#stats" class="footer-link">Model Metrics</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Data Sources</h4>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">DES Agricultural Census</a></li>
+            <li><a href="https://open-meteo.com" target="_blank" class="footer-link">Open-Meteo Weather</a></li>
+            <li><a href="#" class="footer-link">Govt. of India MoAFW</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 KrishiDrishti · कृषि दृष्टि · Built with 🌾 for Indian Agriculture</p>
+        <p class="footer-note">Data: DES, Ministry of Agriculture &amp; Farmers Welfare, Government of India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+     INTERACTIVE MODALS
+     ═══════════════════════════════════════════ -->
+  <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
+    <div class="modal-container" id="modal-container">
+
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- MODAL 1: AI YIELD WIZARD -->
+      <div id="modal-yield" class="modal-panel" hidden>
+        <div class="modal-header">
+          <div class="modal-icon-badge">🤖</div>
+          <div>
+            <h2 class="modal-title">AI Crop Yield Prediction</h2>
+            <p class="modal-subtitle">Live prediction · XGBoost · 77,000+ training records</p>
+          </div>
+        </div>
+        <div class="chat-area" id="chat-area">
+          <div class="chat-msg ai-msg">
+            <span class="chat-avatar">🌾</span>
+            <div class="chat-bubble"><strong>KrishiDrishti AI</strong><br />Namaste! 🙏 I'll help you forecast crop
+              yield for your district. Let's begin — which <strong>State</strong> are you farming in?</div>
+          </div>
+        </div>
+        <div id="wizard-steps">
+          <div class="wiz-step" id="wiz-step-state">
+            <label class="wiz-label">Select State</label>
+            <select class="wiz-select" id="wiz-state">
+              <option value="">Loading states…</option>
+            </select>
+            <button class="wiz-next-btn" id="wiz-next-state">Next →</button>
+          </div>
+          <div class="wiz-step" id="wiz-step-district" hidden>
+            <label class="wiz-label">Select District</label>
+            <select class="wiz-select" id="wiz-district">
+              <option value="">Select state first</option>
+            </select>
+            <button class="wiz-next-btn" id="wiz-next-district">Next →</button>
+          </div>
+          <div class="wiz-step" id="wiz-step-crop" hidden>
+            <label class="wiz-label">Select Crop</label>
+            <select class="wiz-select" id="wiz-crop">
+              <option value="">Loading…</option>
+            </select>
+            <button class="wiz-next-btn" id="wiz-next-crop">Next →</button>
+          </div>
+          <div class="wiz-step" id="wiz-step-season" hidden>
+            <label class="wiz-label">Select Season</label>
+            <select class="wiz-select" id="wiz-season">
+              <option value="">Loading…</option>
+            </select>
+            <button class="wiz-next-btn" id="wiz-next-season">Next →</button>
+          </div>
+          <div class="wiz-step" id="wiz-step-year" hidden>
+            <label class="wiz-label">Forecast Year</label>
+            <input class="wiz-select" id="wiz-year" type="number" min="2024" max="2030" value="2025" />
+            <button class="wiz-next-btn" id="wiz-predict-btn">🚀 Run AI Forecast</button>
+          </div>
+        </div>
+        <div id="yield-result" class="yield-result" hidden></div>
+      </div>
+
+      <!-- MODAL 2: WEATHER -->
+      <div id="modal-weather" class="modal-panel" hidden>
+        <div class="modal-header">
+          <div class="modal-icon-badge">🌦️</div>
+          <div>
+            <h2 class="modal-title">Live Agro-Weather Insights</h2>
+            <p class="modal-subtitle">Real-time from Open-Meteo · Agricultural advisories included</p>
+          </div>
+        </div>
+        <div class="weather-form">
+          <div class="wf-row">
+            <div><label class="wiz-label">State</label><select class="wiz-select" id="weather-state-sel">
+                <option value="">Loading…</option>
+              </select></div>
+            <div><label class="wiz-label">District</label><select class="wiz-select" id="weather-district-sel">
+                <option value="">Select state first</option>
+              </select></div>
+          </div>
+          <button class="wiz-next-btn mt-8" id="weather-fetch-btn">🌤️ Get Live Weather</button>
+        </div>
+        <div id="weather-result" class="weather-result" hidden></div>
+      </div>
+
+      <!-- MODAL 3: HISTORICAL TRENDS -->
+      <div id="modal-history" class="modal-panel" hidden>
+        <div class="modal-header">
+          <div class="modal-icon-badge">📈</div>
+          <div>
+            <h2 class="modal-title">Historical Yield Analytics</h2>
+            <p class="modal-subtitle">2016–2024 data · District &amp; crop level trends</p>
+          </div>
+        </div>
+        <div class="weather-form">
+          <div class="wf-row">
+            <div><label class="wiz-label">State</label><select class="wiz-select" id="hist-state-sel">
+                <option value="">Loading…</option>
+              </select></div>
+            <div><label class="wiz-label">District</label><select class="wiz-select" id="hist-district-sel">
+                <option value="">Select state first</option>
+              </select></div>
+          </div>
+          <div class="wf-row" style="margin-top:12px">
+            <div><label class="wiz-label">Crop</label><select class="wiz-select" id="hist-crop-sel">
+                <option value="">Loading…</option>
+              </select></div>
+          </div>
+          <button class="wiz-next-btn mt-8" id="hist-fetch-btn">📊 Show Historical Trends</button>
+        </div>
+        <div id="hist-result" class="hist-result" hidden></div>
+      </div>
+
+      <!-- MODAL 4: SHAP -->
+      <div id="modal-shap" class="modal-panel" hidden>
+        <div class="modal-header">
+          <div class="modal-icon-badge">🔍</div>
+          <div>
+            <h2 class="modal-title">AI Explainability — SHAP Analysis</h2>
+            <p class="modal-subtitle">Understand why the AI made its prediction</p>
+          </div>
+        </div>
+        <div class="shap-intro">
+          <div class="shap-info-box">
+            <h4>What is SHAP?</h4>
+            <p>SHAP (SHapley Additive exPlanations) assigns each feature a contribution score explaining <em>why</em>
+              the model predicted a specific yield value.</p>
+          </div>
+          <div class="weather-form">
+            <div class="wf-row">
+              <div><label class="wiz-label">State</label><select class="wiz-select" id="shap-state-sel">
+                  <option value="">Loading…</option>
+                </select></div>
+              <div><label class="wiz-label">District</label><select class="wiz-select" id="shap-district-sel">
+                  <option value="">Select state first</option>
+                </select></div>
+            </div>
+            <div class="wf-row" style="margin-top:12px">
+              <div><label class="wiz-label">Crop</label><select class="wiz-select" id="shap-crop-sel">
+                  <option value="">Loading…</option>
+                </select></div>
+              <div><label class="wiz-label">Season</label><select class="wiz-select" id="shap-season-sel">
+                  <option value="">Loading…</option>
+                </select></div>
+            </div>
+            <button class="wiz-next-btn mt-8" id="shap-run-btn">🔍 Explain This Prediction</button>
+          </div>
+          <div id="shap-result" class="shap-result" hidden></div>
+        </div>
+      </div>
+
+    </div><!-- /modal-container -->
+  </div><!-- /modal-overlay -->
+
+  <script src="app.js"></script>
+</body>
+
+</html>

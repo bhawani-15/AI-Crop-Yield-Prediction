@@ -2,6 +2,8 @@ import os
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import RedirectResponse
 
 from backend.schemas import (
     PredictionRequest,
@@ -102,3 +104,19 @@ def get_historical_trends(
         return inference_service.get_historical_trends(state=state, district=district, crop=crop)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Historical data error: {str(e)}")
+
+# ─── Root redirect: / → landing page ───────────────────────────────────────
+@app.get("/", include_in_schema=False)
+def root_redirect():
+    """Redirect root URL to the KrishiDrishti landing page."""
+    return RedirectResponse(url="/landing/index.html")
+
+@app.get("/app", include_in_schema=False)
+def app_redirect():
+    """Convenience redirect to the Streamlit dashboard."""
+    return RedirectResponse(url="http://localhost:8501")
+
+# ─── Static files: serve landing/ at /landing (MUST be mounted last) ────────
+_landing_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "landing")
+_landing_dir = os.path.normpath(_landing_dir)
+app.mount("/landing", StaticFiles(directory=_landing_dir, html=True), name="landing")
